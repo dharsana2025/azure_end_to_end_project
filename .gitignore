@@ -1,0 +1,14 @@
+# Secrets and local config
+.env
+*.pem
+*.key
+
+# Notebooks and Python
+.ipynb_checkpoints/
+__pycache__/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
