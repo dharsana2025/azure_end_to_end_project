@@ -45,7 +45,7 @@ the `bronze` container, for example `bronze/sales_2015/sales_2015.csv`.
 ![ADF pipeline](docs/images/adf_ingestion_pipeline.png)
 
 ### 2. Silver layer (Azure Databricks)
-The notebook [`databricks/silver_layer.ipynb`](databricks/silver_layer.ipynb):
+The notebook [`azure_databricks/silver_layer.ipynb`](azure_databricks/silver_layer.ipynb):
 
 - Creates a Unity Catalog external location for the `silver` container
 - Reads each Bronze CSV with PySpark
@@ -86,7 +86,7 @@ Unity Catalog), Azure Synapse Analytics (serverless SQL), Power BI
 azure_end_to_end_project/
 ├── source_data/          raw Adventure Works CSV files
 ├── architecture/         architecture diagram
-├── databricks/           Bronze to Silver notebook
+├── azure_databricks/           Bronze to Silver notebook
 ├── synapse/              Gold layer SQL scripts
 ├── powerbi/              dashboard export and screenshot
 └── docs/images/          pipeline and Synapse screenshots
@@ -96,7 +96,7 @@ azure_end_to_end_project/
 
 1. Create an ADLS Gen2 storage account with `bronze`, `silver` and `gold` containers
 2. Build the ADF pipeline to copy the files from `source_data/` into Bronze
-3. Create the Databricks external location and run `databricks/silver_layer.ipynb`
+3. Create the Databricks external location and run `azure_databricks/silver_layer.ipynb`
 4. Run the Synapse scripts in order
 5. Connect Power BI to the Synapse serverless SQL endpoint and build the report
 
